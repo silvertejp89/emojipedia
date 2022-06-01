@@ -5,7 +5,12 @@ import emojipedia from '../emojipedia';
 //I used a synonym for emoji (kaomoji) to avoid confusion
 function createCard(kaomoji) {
   return (
-    <Card emoji={kaomoji.emoji} name={kaomoji.name} meaning={kaomoji.meaning} />
+    <Card
+      key={kaomoji.id}
+      emoji={kaomoji.emoji}
+      name={kaomoji.name}
+      meaning={kaomoji.meaning}
+    />
   );
 }
 
