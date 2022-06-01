@@ -1,18 +1,6 @@
 import React from 'react';
-
-function Card(props) {
-  return (
-    <div className="term">
-      <dt>
-        <span className="emoji" role="img" aria-label="Tense Biceps">
-          {props.emoji}
-        </span>
-        <span>{props.name}</span>
-      </dt>
-      <dd>{props.meaning}</dd>
-    </div>
-  );
-}
+import Card from './Card';
+import emojipedia from '../emojipedia';
 
 function App() {
   return (
@@ -23,10 +11,9 @@ function App() {
 
       <dl className="dictionary">
         <Card
-          emoji="💪"
-          name="Tense Biceps"
-          meaning="“You can do that!” or “I feel strong!” Arm with tense biceps. Also
-          used in connection with doing sports, e.g. at the gym."
+          emoji={emojipedia[0].emoji}
+          name={emojipedia[1].name}
+          meaning={emojipedia[1].meaning}
         />
 
         <Card
